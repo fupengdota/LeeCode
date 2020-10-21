@@ -1,8 +1,11 @@
 package DesignPatterns.Factory;
 
-public class FactoryShape {
+public class FactoryShape  implements  AbstractFactory{
 
-    public  Shape getShape(String shapeType) {
+
+
+    @Override
+    public Shape getShape(String shapeType) {
         if(shapeType == null) {
             return null;
         }
@@ -10,9 +13,13 @@ public class FactoryShape {
         if(shapeType.equals("CIRCLE")) {
             return new Circle();
         } else if(shapeType.equals("SQUARE")) {
-           return  new Square();
+            return  new Square();
         }
         return null;
     }
 
+    @Override
+    public Color getCorlor(String corlorType) {
+        return null;
+    }
 }

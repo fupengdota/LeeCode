@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import DesignPatterns.DynamicProxy;
+import DesignPatterns.Factory.AbstractFactory;
+import DesignPatterns.Factory.Color;
+import DesignPatterns.Factory.FactoryColor;
 import DesignPatterns.Factory.FactoryShape;
 import DesignPatterns.Factory.Shape;
 
@@ -22,12 +25,25 @@ public class MainActivity extends AppCompatActivity {
 //                //动态代理调用
 //                DynamicProxy dynamicProxy = new DynamicProxy();
 //                dynamicProxy.call();
-                //静态工厂d调用测试
-                FactoryShape factoryShape = new FactoryShape();
+                //工厂d调用测试
+//                FactoryShape factoryShape = new FactoryShape();
+//                Shape circle  =  factoryShape.getShape("CIRCLE");
+//                circle.draw();;
+//                Shape square =   factoryShape.getShape("SQUARE");
+//                square.draw();
+                //抽象工厂调用测试
+                AbstractFactory factoryShape = new FactoryShape();
+                AbstractFactory factoryCorlor = new FactoryColor();
                 Shape circle  =  factoryShape.getShape("CIRCLE");
                 circle.draw();;
                 Shape square =   factoryShape.getShape("SQUARE");
                 square.draw();
+                Color green = factoryCorlor.getCorlor("green");
+                Color blue = factoryCorlor.getCorlor("blue");
+                green.fill();
+                blue.fill();
+
+
             }
         });
 
