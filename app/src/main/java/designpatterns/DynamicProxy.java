@@ -1,4 +1,4 @@
-package DesignPatterns;
+package designpatterns;
 
 
 import java.lang.reflect.InvocationHandler;

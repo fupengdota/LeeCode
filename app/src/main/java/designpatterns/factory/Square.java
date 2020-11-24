@@ -1,8 +1,8 @@
-package DesignPatterns.Factory;
+package designpatterns.factory;
 
 public class Square implements Shape {
     @Override
     public void draw() {
-        System.out.println("draw  Square");
+        System.out.println("打印正方形");
     }
 }
