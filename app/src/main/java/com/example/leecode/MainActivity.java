@@ -5,10 +5,10 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import designpatterns.abstractfactory.AbstractFactory;
-import designpatterns.abstractfactory.FactoryProducer;
-import designpatterns.factory.Shape;
-import designpatterns.factory.ShapeFactory;
+import designpatterns.bridge.Circle;
+import designpatterns.bridge.Rectangle;
+import designpatterns.bridge.Red;
+import designpatterns.bridge.Shape;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,10 +27,28 @@ public class MainActivity extends AppCompatActivity {
 //                Shape circle = shapeFactory.getShape("circle");
 //                circle.draw();
 
-                AbstractFactory shapeFactory = FactoryProducer.getFactory("shape");
-                shapeFactory.getShape("rectangle").draw();
-                AbstractFactory corcleFactory = FactoryProducer.getFactory("corlor");
-                corcleFactory.getCorlor("red").fill();
+//                AbstractFactory shapeFactory = FactoryProducer.getFactory("shape");
+//                shapeFactory.getShape("rectangle").draw();
+//                AbstractFactory corcleFactory = FactoryProducer.getFactory("corlor");
+//                corcleFactory.getCorlor("red").fill();
+//
+//                Builder builder = new MacBookBuilder();
+//                Directory directory = new Directory(builder);
+//                directory.construct("微星主板","htc显示器 ");
+//                System.out.println(builder.builder().toString());
+
+//                AudioPlay audioPlay = new AudioPlayImpl();
+//                audioPlay.play("vcl");
+//                audioPlay.play("mp3");
+//                audioPlay.play("mp4");
+
+                Shape shape = new Circle();
+                shape.setColor(new Red());
+                shape.draw();
+
+                Shape shape1 = new Rectangle();
+                shape1.setColor(new Red());
+                shape1.draw();
             }
         });
 
